@@ -19,17 +19,17 @@ const Repo: React.FC<Props> = ({ repo }) => {
                 <p className='mb-2' >
                     {repo.description}
                 </p>
-                <div className='flex flex-row gap-2' >
-                    <div className="mr-2 badge badge-info badge-lg p-2">
+                <div className='flex items-center text-center md:text-left flex-col md:flex-row gap-2' >
+                    <div className="mr-2 badge badge-info badge-lg p-4 hover:badge-outline cursor-default transition ">
                         <FaEye className='mr-2' size={24} /> {repo.watchers_count}
                     </div>
-                    <div className="mr-2 badge badge-success badge-lg p-2">
+                    <div className="mr-2 badge badge-success badge-lg p-4 hover:badge-outline cursor-default transition">
                         <FaStar className='mr-2' size={24} /> {repo.stargazers_count}
                     </div>
-                    <div className="mr-2 badge badge-error badge-lg p-2">
+                    <div className="mr-2 badge badge-error badge-lg p-4 hover:badge-outline cursor-default transition">
                         <FaInfo className='mr-2' size={24} /> {repo.open_issues_count}
                     </div>
-                    <div className="mr-2 badge badge-warning badge-lg p-2">
+                    <div className="mr-2 badge badge-warning badge-lg p-4 hover:badge-outline cursor-default transition">
                         <FaUtensils className='mr-2' size={24} /> {repo.forks_count}
                     </div>
                 </div>
