@@ -6,7 +6,7 @@ export const fetchRepos = async (target: string): Promise<GithubApiUserReposResp
         per_page: "10",
     })
 
-    const resp = await fetch(`${import.meta.env.VITE_APP_GHURL}/users/${target}/repos?${params}`)
+    const resp = await fetch(`${process.env.VITE_APP_GHURL}/users/${target}/repos?${params}`)
     const data = (await resp.json()) as GithubApiUserReposResp[]
     return data
 }
