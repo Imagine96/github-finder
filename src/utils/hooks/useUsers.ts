@@ -25,7 +25,7 @@ const useUsers = (): [GithubApiRespUsers[], boolean, (target?: string) => void, 
                 })
             })
             .catch(err => {
-                console.log(err)
+                console.log("Error Here", err)
                 dispatch({
                     type: GHActionsTypesEnum.SETLOADINGSTATE,
                     payload: false
